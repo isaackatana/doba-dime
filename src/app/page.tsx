@@ -1,9 +1,14 @@
-// app/page.tsx
+import Head from 'next/head'
 import Link from 'next/link'
 
 export default function HomePage() {
   return (
     <main className="bg-white text-gray-900">
+      <Head>
+        <title>Doba Dime - Distribute Your Music Globally</title>
+        <meta name="description" content="Doba Dime helps African musicians distribute their music globally, track royalties, and get paid via M-Pesa." />
+      </Head>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-4">Distribute Your Music Globally</h1>
@@ -13,6 +18,7 @@ export default function HomePage() {
         <Link
           href="/upload"
           className="bg-white text-blue-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition"
+          aria-label="Get started with uploading your music"
         >
           Get Started
         </Link>
@@ -48,12 +54,43 @@ export default function HomePage() {
               desc: "Doba Dime is made by Africans, for African creators.",
             },
           ].map((feature, idx) => (
-            <div key={idx} className="bg-gray-100 rounded-lg p-6 shadow-sm hover:shadow-md transition">
+            <div
+              key={idx}
+              className="bg-gray-100 rounded-lg p-6 shadow-sm hover:shadow-lg transition-all"
+            >
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
               <p className="text-gray-700">{feature.desc}</p>
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Distribution Information */}
+      <section className="bg-gray-50 py-16 px-6 text-center">
+        <h2 className="text-3xl font-bold mb-6">Where Will Your Music Go?</h2>
+        <p className="text-lg text-gray-700 mb-6">
+          Once you upload your music to Doba Dime, we distribute it to all the major streaming platforms so you can reach listeners worldwide.
+        </p>
+        <ul className="text-lg text-gray-700 list-inside mb-8">
+          <li>🎵 Spotify</li>
+          <li>🎧 Apple Music</li>
+          <li>🎶 Tidal</li>
+          <li>📱 Deezer</li>
+          <li>📀 Amazon Music</li>
+          <li>🎬 YouTube Music</li>
+          <li>🎧 SoundCloud</li>
+          <li>🌍 And many more...</li>
+        </ul>
+        <p className="text-lg text-gray-700 mb-6">
+          We ensure your music is available on the most popular platforms globally, from Africa to the rest of the world.
+        </p>
+        <Link
+          href="/upload"
+          className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition"
+          aria-label="Upload Your Music Now"
+        >
+          Upload Your First Track
+        </Link>
       </section>
 
       {/* Call to Action */}
@@ -63,6 +100,7 @@ export default function HomePage() {
         <Link
           href="/upload"
           className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition"
+          aria-label="Upload your first track"
         >
           Upload Your First Track
         </Link>
@@ -70,7 +108,18 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="text-center py-6 text-sm text-gray-500">
-        © 2025 Doba Dime. Built for African Music.
+        <p>© 2025 Doba Dime. Built for African Music.</p>
+        <div className="mt-4">
+          <Link href="https://facebook.com/dobadime" className="text-blue-600 hover:text-blue-800 mx-2" aria-label="Facebook">
+            Facebook
+          </Link>
+          <Link href="https://twitter.com/dobadime" className="text-blue-600 hover:text-blue-800 mx-2" aria-label="Twitter">
+            Twitter
+          </Link>
+          <Link href="https://instagram.com/dobadime" className="text-blue-600 hover:text-blue-800 mx-2" aria-label="Instagram">
+            Instagram
+          </Link>
+        </div>
       </footer>
     </main>
   )
