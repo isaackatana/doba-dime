@@ -16,7 +16,7 @@ export default function HomePage() {
           Upload your tracks, track royalties, and get paid via M-Pesa. Built for African musicians.
         </p>
         <Link
-          href="/upload"
+          href="/auth"
           className="bg-white text-blue-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition"
           aria-label="Get started with uploading your music"
         >
@@ -98,7 +98,7 @@ export default function HomePage() {
         <h2 className="text-3xl font-bold mb-4">Ready to Get Your Music Out There?</h2>
         <p className="text-lg text-gray-700 mb-6">Join hundreds of African artists distributing music worldwide with Doba Dime.</p>
         <Link
-          href="/upload"
+          href="/auth"
           className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition"
           aria-label="Upload your first track"
         >
